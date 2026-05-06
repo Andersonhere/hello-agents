@@ -1,0 +1,1613 @@
+[
+  {
+    "url": "https://trendshift.io/api/badge/repositories/15520",
+    "local_file": "./images/image_49d2ede1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/github/stars/datawhalechina/Hello-Agents?style=flat&logo=github",
+    "local_file": "./images/image_a50f64e8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/github/forks/datawhalechina/Hello-Agents?style=flat&logo=github",
+    "local_file": "./images/image_4e1d7384.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/badge/language-Chinese-brightgreen?style=flat",
+    "local_file": "./images/image_e6bc040e.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/badge/GitHub-Project-blue?style=flat&logo=github",
+    "local_file": "./images/image_4bde3adb.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/badge/在线阅读-Online%20Reading-green?style=flat&logo=gitbook",
+    "local_file": "./images/image_4b2f75e2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md"
+    ]
+  },
+  {
+    "url": "https://contrib.rocks/image?repo=datawhalechina/Hello-Agents",
+    "local_file": "./images/image_d03eadbd.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/badge/language-English-blue?style=flat",
+    "local_file": "./images/image_b4a28664.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://img.shields.io/badge/Online%20Reading-在线阅读-green?style=flat&logo=gitbook",
+    "local_file": "./images/image_67656e9f.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/读者群二维码.png",
+    "local_file": "./images/读者群二维码.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/README_EN.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-1.png",
+    "local_file": "./images/8-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-2.png",
+    "local_file": "./images/8-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-3.png",
+    "local_file": "./images/8-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-4.png",
+    "local_file": "./images/8-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-5.png",
+    "local_file": "./images/8-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-6.png",
+    "local_file": "./images/8-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-7.png",
+    "local_file": "./images/8-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-8.png",
+    "local_file": "./images/8-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-9.png",
+    "local_file": "./images/8-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-10.png",
+    "local_file": "./images/8-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/8-figures/8-11.png",
+    "local_file": "./images/8-11.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter8/第八章 记忆与检索.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-0.png",
+    "local_file": "./images/1757242319667-0.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-1.png",
+    "local_file": "./images/1757242319667-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-2.png",
+    "local_file": "./images/1757242319667-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-3.png",
+    "local_file": "./images/1757242319667-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-4.png",
+    "local_file": "./images/1757242319667-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-6.png",
+    "local_file": "./images/1757242319667-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-5.png",
+    "local_file": "./images/1757242319667-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/1-figures/1757242319667-18.png",
+    "local_file": "./images/1757242319667-18.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter1/第一章 初识智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/6-figures/01.png",
+    "local_file": "./images/01.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/第六章 框架开发实践.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/Chapter6-Framework-Development-Practice.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/6-figures/02.png",
+    "local_file": "./images/02.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/第六章 框架开发实践.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/Chapter6-Framework-Development-Practice.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/6-figures/03.png",
+    "local_file": "./images/03.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/第六章 框架开发实践.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/Chapter6-Framework-Development-Practice.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/6-figures/04.png",
+    "local_file": "./images/04.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/第六章 框架开发实践.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter6/Chapter6-Framework-Development-Practice.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/7-figures/table-01.png",
+    "local_file": "./images/table-01.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter7/第七章 构建你的Agent框架.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter7/Chapter7-Building-Your-Agent-Framework.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/7-figures/table-02.png",
+    "local_file": "./images/table-02.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter7/第七章 构建你的Agent框架.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter7/Chapter7-Building-Your-Agent-Framework.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/7-figures/01.png",
+    "local_file": "./images/01.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter7/第七章 构建你的Agent框架.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter7/Chapter7-Building-Your-Agent-Framework.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/9-figures/9-1.webp",
+    "local_file": "./images/9-1.webp",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter9/Chapter9-Context-Engineering.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter9/第九章 上下文工程.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/9-figures/9-2.webp",
+    "local_file": "./images/9-2.webp",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter9/Chapter9-Context-Engineering.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter9/第九章 上下文工程.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/9-figures/9-3.png",
+    "local_file": "./images/9-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter9/Chapter9-Context-Engineering.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter9/第九章 上下文工程.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-1.png",
+    "local_file": "./images/10-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-2.png",
+    "local_file": "./images/10-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-3.png",
+    "local_file": "./images/10-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-1.png",
+    "local_file": "./images/10-table-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-4.png",
+    "local_file": "./images/10-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-5.png",
+    "local_file": "./images/10-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-2.png",
+    "local_file": "./images/10-table-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-6.png",
+    "local_file": "./images/10-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-3.png",
+    "local_file": "./images/10-table-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-4.png",
+    "local_file": "./images/10-table-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-5.png",
+    "local_file": "./images/10-table-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-6.png",
+    "local_file": "./images/10-table-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-7.png",
+    "local_file": "./images/10-table-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-7.png",
+    "local_file": "./images/10-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-8.png",
+    "local_file": "./images/10-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-table-8.png",
+    "local_file": "./images/10-table-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-9.png",
+    "local_file": "./images/10-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-10.png",
+    "local_file": "./images/10-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/10-figures/10-11.png",
+    "local_file": "./images/10-11.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter10/第十章 智能体通信协议.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-1.png",
+    "local_file": "./images/11-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-1.png",
+    "local_file": "./images/11-table-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-2.png",
+    "local_file": "./images/11-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-3.png",
+    "local_file": "./images/11-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-2.png",
+    "local_file": "./images/11-table-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-4.png",
+    "local_file": "./images/11-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-3.png",
+    "local_file": "./images/11-table-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-5.png",
+    "local_file": "./images/11-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-4.png",
+    "local_file": "./images/11-table-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-6.png",
+    "local_file": "./images/11-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-5.png",
+    "local_file": "./images/11-table-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-7.png",
+    "local_file": "./images/11-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-6.png",
+    "local_file": "./images/11-table-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-7.png",
+    "local_file": "./images/11-table-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-8.png",
+    "local_file": "./images/11-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-9.png",
+    "local_file": "./images/11-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-8.png",
+    "local_file": "./images/11-table-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/11-figures/11-table-9.png",
+    "local_file": "./images/11-table-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/第十一章 Agentic-RL.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter11/Chapter11-Agentic-RL.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/hello-agents/main/docs/images/16-figures/16-1.png",
+    "local_file": "./images/16-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/第十六章 毕业设计.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/Chapter16-Graduation-Project.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/hello-agents/main/docs/images/16-figures/16-2.png",
+    "local_file": "./images/16-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/第十六章 毕业设计.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/Chapter16-Graduation-Project.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/hello-agents/main/docs/images/16-figures/16-3.png",
+    "local_file": "./images/16-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/第十六章 毕业设计.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/Chapter16-Graduation-Project.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/hello-agents/main/docs/images/16-figures/16-4.png",
+    "local_file": "./images/16-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/第十六章 毕业设计.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter16/Chapter16-Graduation-Project.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-01.png",
+    "local_file": "./images/coze-01.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-02.png",
+    "local_file": "./images/coze-02.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-03.png",
+    "local_file": "./images/coze-03.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-04.png",
+    "local_file": "./images/coze-04.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-05.png",
+    "local_file": "./images/coze-05.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-06.png",
+    "local_file": "./images/coze-06.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-07.png",
+    "local_file": "./images/coze-07.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-08.png",
+    "local_file": "./images/coze-08.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-09.png",
+    "local_file": "./images/coze-09.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-10.png",
+    "local_file": "./images/coze-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-11.png",
+    "local_file": "./images/coze-11.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-12.png",
+    "local_file": "./images/coze-12.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-13.png",
+    "local_file": "./images/coze-13.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/coze-14.png",
+    "local_file": "./images/coze-14.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-01.png",
+    "local_file": "./images/dify-01.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-02.png",
+    "local_file": "./images/dify-02.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-14.png",
+    "local_file": "./images/dify-14.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-18.png",
+    "local_file": "./images/dify-18.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-15.png",
+    "local_file": "./images/dify-15.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-16.png",
+    "local_file": "./images/dify-16.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-17.png",
+    "local_file": "./images/dify-17.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-19.png",
+    "local_file": "./images/dify-19.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-20.png",
+    "local_file": "./images/dify-20.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-21.png",
+    "local_file": "./images/dify-21.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-12.png",
+    "local_file": "./images/dify-12.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-03.png",
+    "local_file": "./images/dify-03.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-04.png",
+    "local_file": "./images/dify-04.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-13.png",
+    "local_file": "./images/dify-13.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-05.png",
+    "local_file": "./images/dify-05.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-06.png",
+    "local_file": "./images/dify-06.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-22.png",
+    "local_file": "./images/dify-22.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-07.png",
+    "local_file": "./images/dify-07.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-08.png",
+    "local_file": "./images/dify-08.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-23.png",
+    "local_file": "./images/dify-23.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-09.png",
+    "local_file": "./images/dify-09.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-10.png",
+    "local_file": "./images/dify-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/dify-11.png",
+    "local_file": "./images/dify-11.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-01.png",
+    "local_file": "./images/n8n-01.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-02.png",
+    "local_file": "./images/n8n-02.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-03.png",
+    "local_file": "./images/n8n-03.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-04.png",
+    "local_file": "./images/n8n-04.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-05.png",
+    "local_file": "./images/n8n-05.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-06.png",
+    "local_file": "./images/n8n-06.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-07.png",
+    "local_file": "./images/n8n-07.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-08.png",
+    "local_file": "./images/n8n-08.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-09.png",
+    "local_file": "./images/n8n-09.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-10.png",
+    "local_file": "./images/n8n-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-11.png",
+    "local_file": "./images/n8n-11.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-12.png",
+    "local_file": "./images/n8n-12.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-13.png",
+    "local_file": "./images/n8n-13.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/5-figures/n8n-14.png",
+    "local_file": "./images/n8n-14.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/第五章 基于低代码平台的智能体搭建.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter5/Chapter5-Building-Agents-with-Low-Code-Platforms.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-00.png",
+    "local_file": "./images/1757246501849-00.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-0.png",
+    "local_file": "./images/1757246501849-0.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-1.png",
+    "local_file": "./images/1757246501849-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-2.png",
+    "local_file": "./images/1757246501849-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-3.png",
+    "local_file": "./images/1757246501849-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-4.png",
+    "local_file": "./images/1757246501849-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-5.png",
+    "local_file": "./images/1757246501849-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-6.png",
+    "local_file": "./images/1757246501849-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-7.png",
+    "local_file": "./images/1757246501849-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-8.png",
+    "local_file": "./images/1757246501849-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-9.png",
+    "local_file": "./images/1757246501849-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/2-figures/1757246501849-10.png",
+    "local_file": "./images/1757246501849-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter2/第二章 智能体发展史.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/3-figures/1757249275674-0.png",
+    "local_file": "./images/1757249275674-0.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/3-figures/1757249275674-1.png",
+    "local_file": "./images/1757249275674-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/3-figures/1757249275674-2.png",
+    "local_file": "./images/1757249275674-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/3-figures/1757249275674-3.png",
+    "local_file": "./images/1757249275674-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/3-figures/1757249275674-4.png",
+    "local_file": "./images/1757249275674-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/3-figures/1757249275674-5.png",
+    "local_file": "./images/1757249275674-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/4-figures/4-1.png",
+    "local_file": "./images/4-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/Chapter4-Building-Classic-Agent-Paradigms.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/第四章 智能体经典范式构建.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/4-figures/4-2.png",
+    "local_file": "./images/4-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/Chapter4-Building-Classic-Agent-Paradigms.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/第四章 智能体经典范式构建.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/4-figures/4-3.png",
+    "local_file": "./images/4-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/Chapter4-Building-Classic-Agent-Paradigms.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/第四章 智能体经典范式构建.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/4-figures/4-4.png",
+    "local_file": "./images/4-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/Chapter4-Building-Classic-Agent-Paradigms.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter4/第四章 智能体经典范式构建.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-1.png",
+    "local_file": "./images/13-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-2.png",
+    "local_file": "./images/13-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-3.png",
+    "local_file": "./images/13-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-4.png",
+    "local_file": "./images/13-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-5.png",
+    "local_file": "./images/13-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-6.png",
+    "local_file": "./images/13-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-7.png",
+    "local_file": "./images/13-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-table-1.png",
+    "local_file": "./images/13-table-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-8.png",
+    "local_file": "./images/13-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/13-figures/13-table-2.png",
+    "local_file": "./images/13-table-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter13/第十三章 智能旅行助手.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-1.png",
+    "local_file": "./images/14-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-2.png",
+    "local_file": "./images/14-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-3.png",
+    "local_file": "./images/14-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-4.png",
+    "local_file": "./images/14-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-5.png",
+    "local_file": "./images/14-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-table-1.png",
+    "local_file": "./images/14-table-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-6.png",
+    "local_file": "./images/14-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-table-2.png",
+    "local_file": "./images/14-table-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-7.png",
+    "local_file": "./images/14-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-8.png",
+    "local_file": "./images/14-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-9.png",
+    "local_file": "./images/14-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/14-figures/14-10.png",
+    "local_file": "./images/14-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-1.png",
+    "local_file": "./images/15-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-2.png",
+    "local_file": "./images/15-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-3.png",
+    "local_file": "./images/15-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-4.png",
+    "local_file": "./images/15-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-5.png",
+    "local_file": "./images/15-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-6.png",
+    "local_file": "./images/15-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-7.png",
+    "local_file": "./images/15-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-8.png",
+    "local_file": "./images/15-8.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-9.png",
+    "local_file": "./images/15-9.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-10.png",
+    "local_file": "./images/15-10.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-11.png",
+    "local_file": "./images/15-11.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-12.png",
+    "local_file": "./images/15-12.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-13.png",
+    "local_file": "./images/15-13.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-14.png",
+    "local_file": "./images/15-14.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/15-figures/15-15.png",
+    "local_file": "./images/15-15.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/第十五章 构建赛博小镇.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter15/Chapter15-Building-Cyber-Town.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-1.png",
+    "local_file": "./images/12-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-table-1.png",
+    "local_file": "./images/12-table-1.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-2.png",
+    "local_file": "./images/12-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-table-2.png",
+    "local_file": "./images/12-table-2.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-3.png",
+    "local_file": "./images/12-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-table-3.png",
+    "local_file": "./images/12-table-3.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-table-4.png",
+    "local_file": "./images/12-table-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-4.png",
+    "local_file": "./images/12-4.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-5.png",
+    "local_file": "./images/12-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-table-5.png",
+    "local_file": "./images/12-table-5.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-6.png",
+    "local_file": "./images/12-6.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/docs/images/12-figures/12-7.png",
+    "local_file": "./images/12-7.png",
+    "used_in": [
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "/Users/gaoqi/wkspace/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md"
+    ]
+  }
+]

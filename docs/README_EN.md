@@ -162,7 +162,7 @@ We are an open-source community and welcome any form of contribution!
 ## Reader Community Group
 
 <div align='center'>
-	<img src="https://raw.githubusercontent.com/datawhalechina/Hello-Agents/main/读者群二维码.png" alt="阅读群额码" width="30%">
+	<img src="./images/读者群二维码.png" alt="阅读群额码" width="30%">
 	<p>Scan the QR code to join the reader community group and discuss with more learners</p>
 </div>
 
