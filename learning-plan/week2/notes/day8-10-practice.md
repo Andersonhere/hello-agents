@@ -182,4 +182,33 @@ ModuleNotFoundError: No module named 'huggingface_hub'
 
 ---
 
+# Day 9 对比官方 SimpleAgent
+
+Q1. 工具调用
+你的 MiniSimpleAgent 没工具能力。官方 SimpleAgent 大概率有工具支持吗？
+
+如果有，你猜它把工具列表存在哪个属性里？
+存放在system_prompt中
+工具是怎么"被 LLM 看见"的？
+通过提示词嵌入
+Q2. 流式输出（streaming）
+你的 run() 是同步阻塞——LLM 全部生成完才返回。 官方会支持流式吗？ 如果支持，run() 的返回值可能会变成什么类型？
+官方支持流式，返回值变成一个共享对象
+Q3. 错误处理
+你的代码里 LLM 调用没有 try/except。 如果 LLM 超时 / 返回 None / API 限流，会怎样？官方会怎么处理？
+直接报错，然后设置重试次数，进行重试
+Q4. 系统提示词的位置
+你把 system_prompt 直接写进 messages[0]。 官方可能怎么处理 system prompt？想想这两种设计哪种更灵活：
+
+A：直接放 messages[0]（你的方式）
+B：单独存为属性，每次 run 时动态拼到 messages 前面
+每次都拼接会占用上下文。我觉得拼接到messages[0]比较合适
+
+Q5. 多轮对话的"边界"
+你的 messages 永远累加。如果跑 100 轮：
+
+会出什么问题？（提示：模型有 context window）
+官方有没有做"窗口截断" / "摘要压缩" / 什么都不做？
+摘要压缩。
+
 *更新时间：2025-05-05*

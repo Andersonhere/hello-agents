@@ -1,148 +1,179 @@
-# Week 3：高级主题 + MCP 协议
+# Week 3：MCP 协议 + 记忆 + RAG + Tracing
 
 > **周期**：Day 15 - Day 21
-> **主题**：MCP 协议集成、记忆系统、RAG 基础
-> **产出**：集成 MCP 工具的 Agent
+> **主题**：构建生产级 Agent 必备的四件套
+> **产出**：一个集成了 MCP、长期记忆、RAG、LangSmith Tracing 的综合 Agent（Week 4 项目的"原型"）
+
+---
+
+## 🎯 修订说明（v2）
+
+- ✅ **新增 Tracing & 评估**（Day 20）—— 就业方向必备
+- ✅ **MCP 增加"手写最小 server"** —— 比只用现成 server 更扎实
+- ✅ **RAG 提升深度** —— 你确认会用到，所以 chunking + retriever 都要动手
+- ✅ **Day 21 整合复盘** —— 把四件套合并成一个 Agent，作为 Week 4 项目的 baseline
 
 ---
 
 ## 📋 本周目标
 
-| 目标 | 说明 | 验收标准 |
+| 目标 | 验收标准 |
+|------|----------|
+| 掌握 MCP 协议 | 能调通现成 server **且**手写一个最小 server（≥1 个工具） |
+| 理解记忆系统 | 能说清短期/工作/长期记忆的实现方式，并实现长期记忆持久化 |
+| 掌握 RAG 全流程 | 能独立完成"文档 → chunking → embedding → 检索 → 注入 prompt" |
+| 掌握 Tracing | 能用 LangSmith 看 trace 并基于 trace 优化一处 prompt |
+| 整合能力 | 把上述四件套合并为一个 Agent 并跑通 |
+
+---
+
+## 📅 每日计划
+
+| 日期 | 主题 | 重点任务 |
 |------|------|----------|
-| 掌握 MCP 协议 | 理解 MCP 原理和使用方法 | 能集成 MCP 工具 |
-| 理解记忆系统 | 了解短期记忆和长期记忆 | 能使用 MemoryTool |
-| 了解 RAG 基础 | 理解检索增强生成原理 | 能运行 RAG 示例 |
-| 实践能力 | 完成 MCP 集成项目 | 项目可运行 |
-
----
-
-## 📅 每日计划索引
-
-| 日期 | 主题 | 重点任务 | 详细计划 |
-|------|------|----------|----------|
-| Day 15-18 | MCP 协议深入 | 协议原理、工具集成、自定义 MCP | [详细计划](./day15-18.md) |
-| Day 19-21 | 记忆与 RAG | 记忆系统、RAG 实现、项目整合 | [详细计划](./day19-21.md) |
-
----
-
-## 🎯 学习重点
-
-### AI 可以帮助的事情 🤖
-
-| 任务 | 提示词参考 | 产出 |
-|------|-----------|------|
-| 解释 MCP 协议原理 | [概念总结提示词](../ai-prompts/concept-summary.md) | 协议理解笔记 |
-| MCP 服务器开发 | [代码解释提示词](../ai-prompts/code-explanation.md) | MCP 服务器代码 |
-| RAG 原理解释 | [概念总结提示词](../ai-prompts/concept-summary.md) | RAG 流程图 |
-| 调试集成问题 | [调试帮助提示词](../ai-prompts/debugging.md) | 解决方案 |
-
-### 自己需要关注的事情 🧠
-
-| 任务 | 关注点 | 方法 |
-|------|--------|------|
-| 运行 MCP 示例 | 理解工具调用流程 | 逐个运行、观察日志 |
-| 集成 MCP 工具 | 掌握集成方法 | 动手实践 |
-| 记忆系统实验 | 理解记忆管理 | 修改参数观察变化 |
-| 整合项目 | 综合运用知识 | 完成 MCP 项目 |
+| Day 15 | MCP 协议原理 + 跑现成 server | 跑通 `code/chapter10/05_UseMCPToolInAgent.py`，搞清 client/server 通信 |
+| Day 16 | **手写最小 MCP server** | Python `mcp` 包，实现 1-2 个工具（如 `read_file`、`get_time`） |
+| Day 17 | 记忆系统 | 短期：消息窗口截断；长期：用 SQLite 或向量库存"用户偏好" |
+| Day 18 | RAG 全流程（上） | 文档加载、chunking 策略对比（固定大小 vs 语义分块） |
+| Day 19 | RAG 全流程（下） | ChromaDB + embedding + 把 retriever 包成 Agent 工具 |
+| Day 20 | **LangSmith Tracing** | 接入 LangSmith → 跑 10 次 → 看 trace → 优化一处 prompt |
+| Day 21 | **整合 + 周复盘** | 合并四件套为一个 Agent；写复盘博客 |
 
 ---
 
 ## 📚 核心知识点
 
-### 1. MCP 协议
+### 1. MCP 协议要点
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    MCP 协议架构                              │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   ┌─────────────┐        ┌─────────────┐                   │
-│   │   Agent     │ ←────→ │  MCP Client │                   │
-│   └─────────────┘        └──────┬──────┘                   │
-│                                 │                          │
-│                          MCP Protocol                       │
-│                                 │                          │
-│   ┌─────────────┐        ┌──────↓──────┐                   │
-│   │  Tools API  │ ←────→ │  MCP Server │                   │
-│   └─────────────┘        └─────────────┘                   │
-│                                                             │
-│   MCP Server 类型：                                         │
-│   - 内置演示服务器（add, subtract...）                       │
-│   - 文件系统服务器                                           │
-│   - GitHub 服务器                                            │
-│   - 自定义服务器                                             │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+Agent ⇄ MCP Client ⇄(协议)⇄ MCP Server ⇄ 实际能力
+                    ↑
+              JSON-RPC over stdio/SSE
 ```
 
-### 2. 记忆系统
+**面试常问**：
+- MCP 解决了什么问题？（工具复用、跨语言、解耦）
+- MCP vs Function Calling 区别？（MCP 是协议层，FC 是 LLM 能力层）
+- 一个 MCP server 暴露什么？（tools、resources、prompts 三类）
 
-| 记忆类型 | 作用 | 实现方式 |
-|----------|------|----------|
-| 短期记忆 | 当前对话上下文 | 消息列表 |
-| 工作记忆 | 正在处理的信息 | 状态管理 |
-| 长期记忆 | 持久化知识 | 向量数据库 |
+### 2. 记忆系统三层
 
-### 3. RAG 流程
+| 层级 | 生命周期 | 实现 | 存什么 |
+|------|----------|------|--------|
+| 短期记忆 | 当前对话 | messages 列表 + 窗口截断 | 最近 N 轮对话 |
+| 工作记忆 | 当前任务 | LangGraph State | 当前任务上下文、中间结果 |
+| 长期记忆 | 跨会话 | SQLite / 向量库 | 用户偏好、历史事实、知识 |
+
+**实践重点**：长期记忆做一个**"用户偏好"小 demo**——记住用户喜欢的语言、风格，下次对话自动应用。
+
+### 3. RAG 必懂概念
 
 ```
-文档 → 分块 → 向量化 → 存储
-                      ↓
-问题 → 向量化 → 相似度检索 → 相关文档
-                              ↓
-                    问题 + 相关文档 → LLM → 回答
+[索引阶段] 文档 → 加载 → 分块 → embedding → 向量库
+                          ↑
+                    chunk_size / overlap 是关键超参
+
+[检索阶段] 问题 → embedding → top-k 相似检索 → rerank(可选) → 拼 prompt → LLM
+```
+
+**至少做一次对比实验**：
+- 同一文档，`chunk_size=200` vs `chunk_size=800` 的检索质量差异
+- 这是博客素材，也是面试素材
+
+### 4. Tracing（详见前一轮对话解释）
+
+**Day 20 必做**：
+1. 注册 LangSmith（免费额度足够）
+2. 给你的 Agent 加 3 行环境变量启用 tracing
+3. 跑 10 个不同问题
+4. 在 LangSmith UI 上找出 1 个"token 浪费/逻辑绕弯"的 case
+5. 改 prompt 后再跑，对比改进
+
+**这一步做完，简历上可以写**：
+> 基于 LangSmith trace 分析定位 prompt 缺陷，优化后 ReAct 循环平均轮次从 X 降至 Y，token 消耗降低 Z%。
+
+---
+
+## 🛠️ 关键约束（基于你的环境）
+
+| 需求 | 替代方案（仅需 LLM key） |
+|------|------------------------|
+| Embedding 模型 | 用大模型 provider 自带的 embedding API（多数都有），或本地 `sentence-transformers` |
+| 向量库 | **ChromaDB**（本地、零配置、零成本） |
+| MCP server 数据源 | 本地文件系统 / mock 数据 |
+| Tracing 后端 | **LangSmith**（注册即用，仅需 API key） |
+| 评估数据集 | 你自己手写 10 个 Q&A pair |
+
+---
+
+## ✅ 验收清单
+
+### Day 15-16 MCP
+- [ ] 跑通官方示例 `05_UseMCPToolInAgent.py`
+- [ ] 能画出 MCP 通信时序图
+- [ ] **手写一个最小 MCP server**（暴露 1-2 个工具）
+- [ ] 把自己的 server 接入 Agent 并调用成功
+
+### Day 17 记忆
+- [ ] 实现短期记忆窗口截断（避免 context 爆炸）
+- [ ] 实现长期记忆存"用户偏好"，跨会话生效
+
+### Day 18-19 RAG
+- [ ] 文档加载 + chunking（至少试 2 种 chunk_size）
+- [ ] ChromaDB 持久化向量库
+- [ ] 把 retriever 封装成 Agent 工具
+- [ ] 至少 5 个测试问题验证检索质量
+
+### Day 20 Tracing
+- [ ] LangSmith 接入成功
+- [ ] 看到完整 trace 树
+- [ ] 找出 1 处优化点并改进
+
+### Day 21 整合
+- [ ] 一个 Agent 同时具备：MCP 工具 + 长期记忆 + RAG + Tracing
+- [ ] 写**周复盘博客**（800 字，含 trace 截图）
+
+---
+
+## 📁 产出位置
+
+```
+learning-plan/output/code/week3/
+├── mcp_server_minimal/        # 手写的 MCP server
+├── memory_demo.py             # 记忆系统 demo
+├── rag_pipeline.py            # RAG 全流程
+├── tracing_demo.py            # LangSmith 接入示例
+└── integrated_agent.py        # ⭐ Day 21 整合版（Week 4 baseline）
+
+learning-plan/output/notes/
+└── week3-summary.md           # 周复盘博客
 ```
 
 ---
 
-## ✅ 每日检查清单
+## 🔗 资源
 
-### Day 15-18 检查清单
-- [ ] 理解 MCP 协议原理
-- [ ] 运行 `05_UseMCPToolInAgent.py`
-- [ ] 运行 `14_weather_agent.py`
-- [ ] 成功集成一个 MCP 工具
-
-### Day 19-21 检查清单
-- [ ] 理解记忆系统类型
-- [ ] 运行记忆相关示例
-- [ ] 理解 RAG 基本原理
-- [ ] 完成 MCP 集成项目
-- [ ] Week 3 学习总结
-
----
-
-## 📁 本周产出
-
-### 必须产出
-- [ ] MCP 协议理解笔记
-- [ ] MCP 工具集成代码
-- [ ] 记忆系统学习笔记
-- [ ] MCP 集成项目
-
-### 可选产出
-- [ ] 自定义 MCP 服务器
-- [ ] RAG 实践代码
-
----
-
-## 🔗 相关资源
-
-### 代码位置
-- `code/chapter10/05_UseMCPToolInAgent.py`
-- `code/chapter10/14_weather_agent.py`
-- `code/chapter10/weather-mcp-server/`
+### 代码参考
+- `code/chapter10/` MCP 系列示例
 - `code/chapter8/01_MemoryTool_Basic_Operations.py`
 - `code/chapter8/04_RAGTool_MarkItDown_Pipeline.py`
 
-### 文档位置
-- `docs/chapter8/第八章 记忆与检索.md`
-- `docs/chapter10/第十章 智能体通信协议.md`
-- `Extra-Chapter/Extra05-AgentSkills解读.md`
+### 外部资源
+- [MCP 官方文档](https://modelcontextprotocol.io/)
+- [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
+- [ChromaDB 文档](https://docs.trychroma.com/)
+- [LangSmith 文档](https://docs.smith.langchain.com/)
 
-### 笔记位置
-- [Week 3 笔记目录](./notes/)
+---
+
+## 🎓 周回顾自测
+
+合上电脑回答：
+
+1. 一次 RAG 调用从输入到输出经过哪些步骤？哪几步可能出错？
+2. 短期记忆"满了"应该怎么办？至少说出 3 种策略
+3. MCP server 和直接写 Python 函数当 tool 相比，多了什么、少了什么？
+4. 你在 LangSmith 上发现的那个优化点，**用 1 句话**讲清前因后果
 
 ---
 

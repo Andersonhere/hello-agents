@@ -47,8 +47,16 @@
 | 任务 | 状态 | 完成时间 |
 |------|------|----------|
 | test_llm_simple.py (LLM 测试) | ✅ | 2025-05-05 |
-| test_simple_agent.py (SimpleAgent 测试) | ✅ | 2025-05-05 |
-| test_react_agent.py (ReActAgent 测试) | ✅ | 2026-05-07 |
+| test_simple_agent.py (SimpleAgent 测试-简化版) | ✅ | 2025-05-05 |
+| test_react_agent.py (ReActAgent 测试-简化版) | ✅ | 2026-05-07 |
+| test_my_simple_agent.py (框架 SimpleAgent) | ✅ | 2026-05-07 |
+| test_my_react_agent.py (框架 ReActAgent) | ✅ | 2026-05-07 |
+
+**框架测试结果**：
+- ✅ HelloAgentsLLM: 自动检测 provider，支持多种 LLM
+- ✅ SimpleAgent: 工具调用、多轮对话、历史记忆
+- ✅ ReActAgent: Thought-Action-Observation 循环正常工作
+- ✅ ToolRegistry: 工具注册和执行正常
 
 **学习产出**：
 - [框架架构总结](./notes/day8-10-framework.md)
@@ -116,9 +124,9 @@
 
 | 统计项 | 数值 |
 |--------|------|
-| 总投入时间 | 4 小时 |
-| 完成任务数 | 7 / 12 |
-| 代码运行次数 | 4 |
+| 总投入时间 | 5 小时 |
+| 完成任务数 | 8 / 12 |
+| 代码运行次数 | 6 |
 | 笔记数量 | 3 |
 
 ---
@@ -131,18 +139,27 @@
 | 🔗 连接者 | LLM 连接测试成功 | Day 8 |
 | 🤖 Agent工程师 | SimpleAgent 测试成功 | Day 8 |
 | 🧠 思想者 | ReActAgent 测试成功 | Day 10 |
+| 🎯 完美主义 | 框架原生代码测试成功 | Day 10 |
 
 ---
 
 ## 📋 待办事项
 
-### 本周剩余任务
+### Day 8-10 已完成 ✅
 
-- [x] ~~测试 ReActAgent~~ ✅ 2026-05-07
+- [x] 框架架构总结
+- [x] 核心类设计理解
+- [x] LLM 连接测试
+- [x] SimpleAgent 测试（简化版 + 框架版）
+- [x] ReActAgent 测试（简化版 + 框架版）
+- [x] 学习笔记记录
+
+### 本周剩余任务 (Day 11-14)
+
 - [ ] 创建自定义 Agent 项目
 - [ ] 了解 LangGraph 或 AutoGen
 - [ ] 完成 Week 2 总结
 
 ---
 
-*最后更新：2026-05-06*
+*最后更新：2026-05-07*

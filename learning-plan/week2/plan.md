@@ -1,8 +1,19 @@
-# Week 2：框架实践
+# Week 2：HelloAgents 深入 + LangGraph 专攻
 
 > **周期**：Day 8 - Day 14
-> **主题**：掌握 HelloAgents 框架，体验主流框架
-> **产出**：使用框架构建简单 Agent
+> **主题**：吃透 HelloAgents 框架内部实现，掌握工业界主流 LangGraph
+> **产出**：双框架实现同一个 ReAct Agent + 一篇对比博客（**简历素材**）
+
+---
+
+## 🎯 修订说明（v2）
+
+相比初版，本周做了以下调整：
+
+- ❌ **砍掉 AutoGen / AgentScope**：工业界 Agent 岗位 90% 用 LangGraph，聚焦才能学透
+- ✅ **新增"手写极简版"环节**：先不看源码，自己写 50 行版本，再对比官方实现
+- ✅ **新增"双框架实现同一问题"**：HelloAgents vs LangGraph 实现同一个 ReAct Agent
+- ✅ **新增周博客产出**：博客即面试素材
 
 ---
 
@@ -10,142 +21,137 @@
 
 | 目标 | 说明 | 验收标准 |
 |------|------|----------|
-| 掌握 HelloAgents | 理解框架核心类和方法 | 能使用框架创建 Agent |
-| 理解框架设计 | 知道框架如何封装底层逻辑 | 能解释框架内部实现 |
-| 体验主流框架 | 了解 LangGraph/AutoGen | 能运行一个框架示例 |
-| 实践能力 | 使用框架构建 Agent | 完成 Agent 小项目 |
+| 吃透 HelloAgents | 不仅会用，能讲清内部实现 | 手写 50 行极简版 ReActAgent |
+| 掌握 LangGraph 核心抽象 | StateGraph/Node/Edge/Checkpoint | 独立画出状态图并实现 |
+| 双框架对比能力 | 理解不同抽象的取舍 | 同一 Agent 用两种框架实现 |
+| 输出能力 | 把学习沉淀成可复用资产 | 1 篇对比博客 |
 
 ---
 
-## 📅 每日计划索引
+## 📅 每日计划
 
-| 日期 | 主题 | 重点任务 | 详细计划 |
-|------|------|----------|----------|
-| Day 8-10 | HelloAgents 框架 | 框架核心类、自定义 Agent | [详细计划](./day8-10.md) |
-| Day 11-14 | 主流框架体验 | LangGraph/AutoGen、实践项目 | [详细计划](./day11-14.md) |
-
----
-
-## 🎯 学习重点
-
-### AI 可以帮助的事情 🤖
-
-| 任务 | 提示词参考 | 产出 |
-|------|-----------|------|
-| 解释框架架构 | [概念总结提示词](../ai-prompts/concept-summary.md) | 架构图 |
-| 代码细节解析 | [代码解释提示词](../ai-prompts/code-explanation.md) | 注释代码 |
-| 框架对比分析 | [概念总结提示词](../ai-prompts/concept-summary.md) | 对比表格 |
-| 调试框架问题 | [调试帮助提示词](../ai-prompts/debugging.md) | 解决方案 |
-
-### 自己需要关注的事情 🧠
-
-| 任务 | 关注点 | 方法 |
-|------|--------|------|
-| 运行框架示例 | 理解每个示例的目的 | 逐个运行、观察输出 |
-| 阅读源代码 | 理解核心实现 | 重点读核心类 |
-| 修改实验 | 掌握框架用法 | 修改参数、扩展功能 |
-| 构建项目 | 综合运用知识 | 完成小项目 |
+| 日期 | 主题 | 重点任务 |
+|------|------|----------|
+| Day 8 | HelloAgents 源码精读 | 重点读 `SimpleAgent`、`ReActAgent`、`ToolRegistry` 源码 |
+| Day 9 | **手写极简版 SimpleAgent** | 不看源码，50 行内实现一个能跑的版本 |
+| Day 10 | **手写极简版 ReActAgent** + 对比官方 | 跑通后逐行对比，列出差异 |
+| Day 11 | LangGraph 入门 | StateGraph、Node、Edge、State Schema |
+| Day 12 | LangGraph 进阶 | 条件边（conditional_edge）、checkpointer 持久化 |
+| Day 13 | **双框架实现 ReAct Agent** | 同一问题、同一工具、两套实现 |
+| Day 14 | **写对比博客 + 周复盘** | 800 字博客，发布到掘金/知乎 |
 
 ---
 
 ## 📚 核心知识点
 
-### 1. HelloAgents 框架核心
+### 1. HelloAgents 源码阅读重点
+
+聚焦 3 个核心类，**不要泛读**：
+
+| 类 | 关注点 | 自问 |
+|----|--------|------|
+| `HelloAgentsLLM` | 如何封装 OpenAI 协议、流式输出 | 不用框架我能写吗？ |
+| `ReActAgent` | prompt 模板、循环退出条件、解析 LLM 输出 | Action 解析失败怎么 recover？ |
+| `ToolRegistry` | 工具注册、参数 schema、调用分发 | 怎么把一个 Python 函数变成 LLM 可见的 tool？ |
+
+### 2. LangGraph 核心概念（必须掌握）
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    HelloAgents 框架架构                      │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   ┌─────────────────────────────────────────────────────┐   │
-│   │                    用户层                            │   │
-│   │  SimpleAgent │ ReActAgent │ ToolAwareSimpleAgent    │   │
-│   └─────────────────────────┬───────────────────────────┘   │
-│                             │                               │
-│   ┌─────────────────────────↓───────────────────────────┐   │
-│   │                    核心层                            │   │
-│   │  HelloAgentsLLM │ ToolRegistry │ Config │ Message   │   │
-│   └─────────────────────────┬───────────────────────────┘   │
-│                             │                               │
-│   ┌─────────────────────────↓───────────────────────────┐   │
-│   │                    工具层                            │   │
-│   │  MCPTool │ NoteTool │ TerminalTool │ SearchTool     │   │
-│   └─────────────────────────────────────────────────────┘   │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│              LangGraph 核心抽象                       │
+├──────────────────────────────────────────────────────┤
+│                                                      │
+│   State (TypedDict)  ← 全局状态，节点间传递           │
+│                                                      │
+│   Node (函数)        ← 接收 State，返回 State 更新    │
+│                                                      │
+│   Edge               ← 静态：A → B                    │
+│   Conditional Edge   ← 动态：根据 State 决定下一步    │
+│                                                      │
+│   Checkpointer       ← 状态持久化（内存/SQLite）      │
+│                                                      │
+└──────────────────────────────────────────────────────┘
 ```
 
-### 2. 核心类说明
+**最小示例需要会写**：
+- 一个 `agent_node`（调 LLM）
+- 一个 `tool_node`（执行工具）
+- 一个 `should_continue` 条件边（根据 LLM 输出判断是否还要调工具）
+- 加上 `MemorySaver` checkpointer
 
-| 类名 | 作用 | 关键方法 |
-|------|------|----------|
-| `HelloAgentsLLM` | LLM 客户端封装 | `think()`, `invoke()` |
-| `SimpleAgent` | 基础智能体 | `run()`, `add_tool()` |
-| `ReActAgent` | ReAct 模式智能体 | `run()` |
-| `ToolRegistry` | 工具注册管理 | `register_tool()`, `execute_tool()` |
-| `MCPTool` | MCP 协议工具 | `run()` |
-| `Config` | 配置管理 | `from_env()` |
+### 3. 双框架对比维度
 
-### 3. 主流框架对比
+实现完后填这张表，作为博客素材：
 
-| 框架 | 特点 | 适用场景 |
-|------|------|----------|
-| **HelloAgents** | 轻量、易学、教程配套 | 学习、简单项目 |
-| **LangGraph** | 图结构、状态管理 | 复杂工作流 |
-| **AutoGen** | 多智能体协作 | 多 Agent 场景 |
-| **AgentScope** | 可视化、易用 | 快速原型 |
-
----
-
-## ✅ 每日检查清单
-
-### Day 8-10 检查清单
-- [ ] 理解 HelloAgents 框架核心类
-- [ ] 运行 `my_llm.py` 成功
-- [ ] 运行 `my_simple_agent.py` 成功
-- [ ] 运行 `my_react_agent.py` 成功
-- [ ] 使用框架创建简单 Agent
-
-### Day 11-14 检查清单
-- [ ] 了解 LangGraph 基本用法
-- [ ] 或 了解 AutoGen 基本用法
-- [ ] 完成框架对比分析
-- [ ] 完成 Agent 小项目
-- [ ] Week 2 学习总结
+| 维度 | HelloAgents | LangGraph |
+|------|-------------|-----------|
+| 抽象层级 | 类继承 | 状态图 |
+| 控制流 | 隐藏在 `run()` | 显式定义边 |
+| 状态管理 | 类属性 | TypedDict |
+| 持久化 | 自己实现 | checkpointer 内置 |
+| 调试体验 | print/log | trace 视图 |
+| 学习曲线 | 平缓 | 较陡 |
+| 适合场景 | 简单 Agent | 复杂工作流 |
 
 ---
 
-## 📁 本周产出
+## 🛠️ 关键约束（基于你的环境）
 
-### 必须产出
-- [ ] HelloAgents 框架运行成功
-- [ ] 自定义 Agent 代码
-- [ ] 框架学习笔记
-- [ ] Agent 小项目
-
-### 可选产出
-- [ ] LangGraph/AutoGen 示例
-- [ ] 框架对比文档
-- [ ] 工具开发代码
+- **只有 LLM key**：所有工具用 mock 数据或本地实现
+  - 搜索 → `duckduckgo-search` 包（无需 key）或 mock
+  - 计算器、时间工具 → 纯 Python
+  - 文件读写 → 本地文件系统
 
 ---
 
-## 🔗 相关资源
+## ✅ 验收清单
 
-### 代码位置
-- `code/chapter7/my_llm.py`
-- `code/chapter7/my_simple_agent.py`
-- `code/chapter7/my_react_agent.py`
-- `code/chapter7/test_*.py`
-- `code/chapter6/Langgraph/`
-- `code/chapter6/AutoGenDemo/`
+### 必须完成
+- [ ] 读完 `HelloAgentsLLM` / `ReActAgent` / `ToolRegistry` 三个类源码并写 200 字摘要
+- [ ] 手写 `mini_simple_agent.py`（≤50 行，能跑）
+- [ ] 手写 `mini_react_agent.py`（≤80 行，能跑）
+- [ ] LangGraph 跑通官方 ReAct quickstart
+- [ ] 自己用 LangGraph 实现一个带 2 个工具的 ReAct Agent
+- [ ] 同一问题（如"查某城市天气并写诗"）用两种框架各实现一遍
+- [ ] **写一篇 800 字对比博客**，至少包含：双框架代码片段、对比表格、个人结论
 
-### 文档位置
+### 加分项
+- [ ] LangGraph 加上 SQLite checkpointer，重启后能恢复对话
+- [ ] 画一张架构对比图（Excalidraw / draw.io）
+
+---
+
+## 📁 产出位置
+
+- 极简版代码：`learning-plan/output/code/week2/mini_*.py`
+- LangGraph 实践：`learning-plan/output/code/week2/langgraph_*.py`
+- 对比博客：`learning-plan/output/notes/week2-framework-comparison.md`
+
+---
+
+## 🔗 资源
+
+### 必读
+- HelloAgents 源码：`code/chapter7/`
+- [LangGraph 官方 Quickstart](https://langchain-ai.github.io/langgraph/tutorials/introduction/)
+- [LangGraph ReAct Agent 示例](https://langchain-ai.github.io/langgraph/how-tos/react-agent-from-scratch/)
+
+### 对比阅读
 - `docs/chapter6/第六章 框架开发实践.md`
 - `docs/chapter7/第七章 构建你的Agent框架.md`
 
-### 笔记位置
-- [Week 2 笔记目录](./notes/)
+---
+
+## 🎓 周回顾问题（Day 14 自测）
+
+合上电脑，纸笔回答：
+
+1. ReAct 循环在 HelloAgents 和 LangGraph 中分别如何"退出"？
+2. LangGraph 的 `State` 和 HelloAgents 的"对话历史"本质区别是什么？
+3. 如果让你给一个新人 5 分钟讲明白 LangGraph，你会画哪 3 个图？
+4. 工业界为什么选 LangGraph？它解决了什么 HelloAgents 没解决的问题？
+
+能流畅回答 = 通过本周。
 
 ---
 

@@ -1,6 +1,6 @@
 # Hello-Agents 学习进度统计
 
-> 生成时间：2026-05-06
+> 生成时间：2026-05-07
 > 学习周期：30天计划
 
 ---
@@ -13,14 +13,14 @@
 ├────────────────────────────────────────────────────────────────────────┤
 │                                                                        │
 │  Week 1 ████████████████████████████████████████ 100% ✅ 已完成         │
-│  Week 2 ████████████████░░░░░░░░░░░░░░░░░░░░░░░░  40% 🔄 进行中         │
+│  Week 2 ████████████████████░░░░░░░░░░░░░░░░░░░░  50% 🔄 进行中         │
 │  Week 3 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   0% ⬜ 未开始         │
 │  Week 4 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   0% ⬜ 未开始         │
 │                                                                        │
-│  总体进度: ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  35%                  │
+│  总体进度: ████████████░░░░░░░░░░░░░░░░░░░░░░░░░░  38%                  │
 │                                                                        │
-│  已学习天数: 8 天 / 30 天                                               │
-│  已投入时间: 约 9 小时                                                  │
+│  已学习天数: 9 天 / 30 天                                               │
+│  已投入时间: 约 13 小时                                                 │
 │                                                                        │
 └────────────────────────────────────────────────────────────────────────┘
 ```
@@ -54,23 +54,66 @@
 
 ---
 
-### Week 2: 框架实践 🔄 40%
+### Week 2: HelloAgents + LangGraph 双修 🔄 50%
 
-📄 [详细进度](./week2/progress.md) | 📝 [学习笔记](./week2/notes/)
+📄 [详细进度](./week2/progress.md) | 📝 [学习笔记](./week2/notes/) | 📋 [v2 计划](./week2/plan.md)
+
+> **⚠️ 计划已 v2 修订**：原"主流框架体验"改为"LangGraph 专攻 + 手写极简版"，详见 `week2/plan.md`
 
 | 阶段 | 状态 | 完成率 | 核心任务 |
 |------|------|--------|----------|
-| Day 8-10 | 🔄 进行中 | 60% | HelloAgents 框架核心 |
-| Day 11-14 | ⬜ 未开始 | 0% | 主流框架体验、实践项目 |
+| Day 8 源码精读 | ✅ 完成 | 100% | HelloAgents 三个核心类 |
+| Day 9 手写 mini SimpleAgent | ✅ 完成 | 100% | ≤50 行手写版 + 官方对比 |
+| Day 10 手写 mini ReActAgent | 🔄 待开始 | 0% | ≤80 行 + 工具循环 |
+| Day 11 LangGraph 入门 | ⬜ 未开始 | 0% | StateGraph / Node / Edge |
+| Day 12 LangGraph 进阶 | ⬜ 未开始 | 0% | 条件边 + checkpointer |
+| Day 13 双框架实现 ReAct | ⬜ 未开始 | 0% | 同一问题两套实现 |
+| Day 14 对比博客 + 周复盘 | ⬜ 未开始 | 0% | **第 1 篇简历博客** |
 
-**当前进度**：
-- ✅ 框架架构总结完成
-- ✅ 核心类设计理解 (HelloAgentsLLM, SimpleAgent, ToolRegistry)
-- ✅ LLM 连接测试成功
-- ✅ SimpleAgent 核心功能测试成功
-- ⬜ 运行完整框架代码 (依赖安装中)
-- ⬜ ReActAgent 测试
-- ⬜ 创建自定义 Agent
+**Day 9 关键成果**（2026-05-07，约 4h）：
+- ✅ 不看源码独立写出 `mini_simple_agent.py`（25 行实现）
+- ✅ 三个测试全部通过：基础问答、多轮上下文、reset 后失忆
+- ✅ 安全规范：API key 迁移到 `.env` + `python-dotenv`，已确认未泄露
+- ✅ 与官方 `SimpleAgent` 对比，识别 4 项工程必要 + 3 项锦上添花
+- ✅ 5 题预测官方设计：Q1/Q3 命中，Q2/Q4/Q5 修正认知盲区
+- 💡 核心洞察：**Agent 的"记忆"不是模型自带，是开发者拼接 messages 拼出来的**
+
+**📂 产出文件**：
+- `output/code/week2/mini_simple_agent.py` —— 手写极简版（含 3 题复盘）
+- `week2/notes/day8-10-practice.md` —— 5 题预测对照笔记
+
+---
+
+### 🎯 明天 Day 10 任务（独立体现）
+
+**主题**：手写极简版 ReActAgent —— 让 Agent 学会"思考-行动-观察"循环
+
+**目标产出**：`output/code/week2/mini_react_agent.py`（≤80 行）
+
+**核心要求**：
+- ⬜ 实现 ReAct prompt 模板（Thought / Action / Observation 三段式）
+- ⬜ 实现工具注册：注入 2 个 mock 工具（`get_weather`、`calculate`）
+- ⬜ 实现解析循环：从 LLM 输出里提取 Action，调工具，把 Observation 拼回 prompt
+- ⬜ 实现迭代上限（防死循环，参考 Day 9 对比中学到的 `max_iterations`）
+- ⬜ 跑通测试题："北京今天的温度乘以 2 等于多少？"（必须用到两个工具）
+
+**预期收获**：
+- 真正理解 ReAct 不是魔法，而是 **prompt 约定 + 字符串解析 + 循环**
+- 体会"为什么需要 max_iterations"——亲自踩一次死循环
+- 为 Day 11 LangGraph 做铺垫（LangGraph 的 ToolNode 就是把这套循环抽象掉）
+
+**开工前阅读**：
+- `learning-plan/week2/plan.md` Day 10 章节
+- 我会在你开始前提供 `mini_react_agent.py` 骨架提示卡
+
+**预计时间**：4h（拆分：30min 周回顾 / 90min 手写 / 60min 跑通调试 / 60min 对比官方 + 笔记）
+
+---
+
+**Week 2 后续节奏**：
+- Day 11-12：LangGraph 入门 + 进阶
+- Day 13：双框架实现同一 ReAct Agent
+- Day 14：写**第 1 篇博客**——双框架对比（800 字，简历素材）
 
 **学习笔记**：
 - [框架架构总结](./week2/notes/day8-10-framework.md)
@@ -192,25 +235,43 @@ Week 4:  ░░░░░░░░ 0 小时
 | 🏗️ 架构师 | 理解框架核心架构 | 2025-05-05 |
 | 🔗 连接者 | LLM 连接测试成功 | 2025-05-05 |
 | 🤖 Agent工程师 | SimpleAgent 测试成功 | 2025-05-05 |
+| ✍️ 极简手艺人 | 不看源码手写 mini_simple_agent | 2026-05-07 |
+| 🔐 安全意识 | API key 迁移到 .env，避免泄露 | 2026-05-07 |
+| 🔍 对比专家 | 7 维度对比手写版 vs 官方版 | 2026-05-07 |
 
 ---
 
-## 📝 下一步行动
+## 📝 下一步行动（已对齐 v2 计划）
 
-### 本周待完成 (Day 8-10)
+### ✅ Day 9 已完成（2026-05-07，约 4h）
 
-- [ ] 安装完整依赖 (huggingface_hub)
-- [ ] 运行原始框架代码 `my_simple_agent.py`
-- [ ] 测试 ReActAgent
-- [ ] 创建一个实用的自定义 Agent
+- [x] 30 min 周回顾
+- [x] 75 min 手写 `mini_simple_agent.py`（25 行实现）
+- [x] 60 min 对照官方源码识别差异
+- [x] 60 min 5 题预测对比 + 文件末 3 题复盘
+- [x] 安全规范：API key 迁移到 `.env`
 
-### 本周后续 (Day 11-14)
+### 🎯 立即开始：Day 10 手写极简版 ReActAgent
 
-- [ ] 了解 LangGraph 基本用法
-- [ ] 或了解 AutoGen 基本用法
-- [ ] 完成框架对比分析
-- [ ] 完成 Agent 小项目
+- [ ] 30 min 复习 Week 1 ReAct 范式（Thought/Action/Observation）
+- [ ] 90 min **不看源码**手写 `mini_react_agent.py`（≤80 行）
+- [ ] 60 min 跑通"北京温度乘以 2"测试 + 调试 max_iterations
+- [ ] 60 min 对照官方 `MyReActAgent`，更新笔记
+
+### Day 11-14 后续
+
+- [ ] Day 11：LangGraph 入门（StateGraph、Node、Edge）
+- [ ] Day 12：LangGraph 进阶（条件边、checkpointer）
+- [ ] Day 13：双框架实现同一 ReAct Agent
+- [ ] Day 14：写**第 1 篇博客**——双框架对比（800 字）
+
+### Week 2 关键产出（简历素材）
+
+- [x] `output/code/week2/mini_simple_agent.py` ✅ Day 9
+- [ ] `output/code/week2/mini_react_agent.py`
+- [ ] `output/code/week2/langgraph_react_agent.py`
+- [ ] `output/notes/week2-framework-comparison.md`（博客）
 
 ---
 
-*报告生成时间：2026-05-06*
+*报告生成时间：2026-05-07*

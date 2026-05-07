@@ -1,119 +1,180 @@
-# Week 4：项目实战
+# Week 4：项目实战 — 本地知识库 Agent
 
 > **周期**：Day 22 - Day 30
-> **主题**：综合项目开发，完成毕业设计
-> **产出**：完整的 Agent 应用项目
+> **主题**：用 LangGraph + RAG + MCP + 长期记忆 + Tracing 构建一个**简历级**后端 Agent
+> **产出**：GitHub 项目 + README + 演示视频 + 复盘博客
 
 ---
 
-## 📋 本周目标
+## 🎯 修订说明（v2）
 
-| 目标 | 说明 | 验收标准 |
-|------|------|----------|
-| 完成综合项目 | 智能旅行助手或自选项目 | 项目可运行 |
-| 整合所学知识 | MCP、记忆、框架 | 功能完整 |
-| 项目文档 | README、代码注释 | 文档清晰 |
-| 毕业设计 | 构建完整 Agent 应用 | 可展示 |
+- ✅ **项目从"智能旅行助手"改为"本地知识库 Agent"** —— 纯后端、零外部 API 依赖、契合你"在公司用 Agent 提效"的目标
+- ✅ **Day 22 单独做设计文档** —— 不写代码，只画图和定接口
+- ✅ **Day 27 评估专题** —— 跑测试集 + Tracing 优化
+- ✅ **Day 29-30 简历包装** —— README、架构图、5 分钟视频
 
 ---
 
-## 📅 每日计划索引
+## 🎯 项目：本地知识库 Agent（"我的 AI 知识助手"）
 
-| 日期 | 主题 | 重点任务 | 详细计划 |
-|------|------|----------|----------|
-| Day 22-28 | 综合项目开发 | 项目选择、环境搭建、功能实现 | [详细计划](./day22-28.md) |
-| Day 29-30 | 毕业设计 + 总结 | 项目完善、总结文档 | [详细计划](./day29-30.md) |
+### 项目定位
 
----
+一个能**吃文档、记偏好、查工具、可追踪**的后端 Agent。可以喂入：
+- 个人笔记 / 公司内部文档 / 技术书
+- 通过 HTTP API 提问，得到基于文档的回答
+- 记住你的偏好（如"回答用中文"、"代码用 Python"）
+- 可以读写本地文件（通过 MCP server）
+- 所有调用可在 LangSmith 追踪
 
-## 🎯 学习重点
+### 为什么这个项目最适合你
 
-### AI 可以帮助的事情 🤖
+| 你的需求 | 本项目对应 |
+|---------|-----------|
+| 就业（Agent 岗） | 覆盖 LangGraph + RAG + MCP + Tracing 全部关键词 |
+| 公司提效 | 直接喂入公司文档即可用 |
+| 只有 LLM key | 零外部 API 依赖（embedding 用 LLM 厂商的或本地） |
+| 重视质量 | 包含设计文档、测试、评估、文档包装全流程 |
 
-| 任务 | 提示词参考 | 产出 |
-|------|-----------|------|
-| 项目架构设计 | [项目指导提示词](../ai-prompts/project-guidance.md) | 架构文档 |
-| 代码调试 | [调试帮助提示词](../ai-prompts/debugging.md) | 解决方案 |
-| 功能实现 | [代码解释提示词](../ai-prompts/code-explanation.md) | 代码实现 |
-| 文档编写 | [项目指导提示词](../ai-prompts/project-guidance.md) | 项目文档 |
+### 技术栈
 
-### 自己需要关注的事情 🧠
-
-| 任务 | 关注点 | 方法 |
-|------|--------|------|
-| 项目规划 | 功能设计、技术选型 | 编写设计文档 |
-| 编码实现 | 核心功能开发 | 动手编码 |
-| 测试验证 | 功能测试、边界测试 | 编写测试用例 |
-| 文档完善 | README、使用说明 | 编写文档 |
-
----
-
-## 📚 项目选择
-
-### 推荐项目：智能旅行助手（第13章）
-
-| 维度 | 说明 |
-|------|------|
-| **技术栈** | Vue3 + FastAPI + MCP |
-| **难度** | ⭐⭐⭐ |
-| **学习价值** | MCP集成、前后端协作 |
-| **时间需求** | 5-6天 |
-
-### 备选项目
-
-| 项目 | 技术栈 | 难度 | 说明 |
-|------|--------|------|------|
-| 深度研究智能体 | FastAPI + HelloAgents | ⭐⭐⭐ | 第14章 |
-| 代码助手 | Python + MCP | ⭐⭐ | 自选 |
-| 文档问答 | RAG + Agent | ⭐⭐ | 自选 |
+```
+LangGraph (状态机)
+  ├─ ChromaDB (向量库)
+  ├─ MCP Server (本地文件读写)
+  ├─ SQLite (长期记忆 / 用户偏好)
+  ├─ LangSmith (Tracing)
+  └─ FastAPI (HTTP 接口)
+```
 
 ---
 
-## ✅ 每日检查清单
+## 📅 每日计划
 
-### Day 22-28 检查清单
-- [ ] 确定项目方向
-- [ ] 搭建项目环境
-- [ ] 完成核心功能
-- [ ] 完成测试验证
-
-### Day 29-30 检查清单
-- [ ] 项目文档完善
-- [ ] 毕业设计完成
-- [ ] 学习总结完成
-- [ ] 项目可展示
-
----
-
-## 📁 本周产出
-
-### 必须产出
-- [ ] 完整的项目代码
-- [ ] 项目 README 文档
-- [ ] 毕业设计报告
-- [ ] 学习总结文档
-
-### 可选产出
-- [ ] 项目演示视频
-- [ ] 技术博客文章
-- [ ] 提交到 Co-creation-projects
+| 天 | 主题 | 不写代码？ |
+|----|------|-----------|
+| **Day 22** | 设计文档（**不写代码**） | ✅ 只画图、定接口 |
+| Day 23 | LangGraph 状态机骨架 + 基础对话 | |
+| Day 24 | 接入 RAG retriever 工具 | |
+| Day 25 | 接入 MCP server（本地文件读写） | |
+| Day 26 | 长期记忆（用户偏好持久化） | |
+| Day 27 | LangSmith Tracing + 评估测试集（**重点**） | |
+| Day 28 | FastAPI HTTP 接口 + Postman 调通 | |
+| Day 29 | README + 架构图 + 部署说明 | |
+| Day 30 | 5 分钟讲解视频 + 复盘博客 + 提交 GitHub | |
 
 ---
 
-## 🔗 相关资源
+## 📋 Day 22 设计文档要求（重要）
 
-### 代码位置
-- `code/chapter13/helloagents-trip-planner/`
-- `code/chapter14/helloagents-deepresearch/`
-- `code/chapter15/Helloagents-AI-Town/`
+**今天不许写代码**。完成 `learning-plan/output/projects/knowledge-agent/DESIGN.md`，包含：
 
-### 文档位置
-- `docs/chapter13/第十三章 智能旅行助手.md`
-- `docs/chapter16/第十六章 毕业设计.md`
-- `Co-creation-projects/README.md`
+1. **功能边界**：MVP 做什么、不做什么（明确说"不做 X"）
+2. **用户故事**：3-5 条 "作为 X，我想 Y，以便 Z"
+3. **架构图**：模块划分（Excalidraw / draw.io 截图）
+4. **状态图**：LangGraph 节点和边的图
+5. **工具列表**：每个工具的名称、入参、出参、归属（内置 / MCP）
+6. **数据模型**：Message、Memory、Document 的字段定义
+7. **API 设计**：至少 3 个 HTTP endpoint（含 request/response 示例）
+8. **测试集计划**：列出 ≥ 10 个测试问题（Day 27 用）
+9. **风险与备选方案**：embedding 不准怎么办？长 context 怎么办？
 
-### 笔记位置
-- [Week 4 笔记目录](./notes/)
+模板在 `learning-plan/week4/project-design-template.md`。
+
+---
+
+## 🛠️ 关键技术选型说明
+
+| 组件 | 选型 | 原因 |
+|------|------|------|
+| 状态机 | LangGraph | 工业标准，简历加分 |
+| 向量库 | ChromaDB | 本地零配置 |
+| Embedding | LLM 厂商 API 或 `BAAI/bge-small-zh` 本地 | 你只有 LLM key，二选一 |
+| 长期记忆 | SQLite | 标准库自带，零依赖 |
+| Tracing | LangSmith | 行业事实标准，简历关键词 |
+| HTTP 框架 | FastAPI | Python Agent 后端事实标准 |
+| MCP server | 自己写 + 可选用官方 filesystem | Week 3 已练手 |
+
+---
+
+## ✅ 验收清单（按天）
+
+### Day 22 设计
+- [ ] DESIGN.md 9 个章节齐全
+- [ ] 至少 2 张图（架构图 + 状态图）
+- [ ] 测试集 ≥ 10 个问题写完
+
+### Day 23-26 实现
+- [ ] LangGraph 状态机能跑通基础对话
+- [ ] RAG 工具：能根据问题检索到相关文档片段
+- [ ] MCP 工具：能读写指定目录下的文件
+- [ ] 长期记忆：重启服务后用户偏好仍在
+
+### Day 27 评估（关键）
+- [ ] 跑 10 个测试问题
+- [ ] 每个问题在 LangSmith 上有完整 trace
+- [ ] 至少识别 2 处可优化点（prompt / chunking / 工具描述）
+- [ ] 优化后再跑一次，记录改进数据
+
+### Day 28 接口
+- [ ] `POST /chat`、`POST /upload`、`GET /memory` 至少 3 个 endpoint
+- [ ] curl / Postman 验证可用
+- [ ] 错误处理（LLM 超时、工具失败）
+
+### Day 29-30 包装（**简历素材**）
+- [ ] README 含：项目简介、架构图、运行方式、API 示例、技术亮点
+- [ ] GitHub 仓库公开，README 有徽章
+- [ ] 5 分钟讲解视频（讲架构 + demo）
+- [ ] 复盘博客 1500 字（踩坑 + 收获 + 改进方向）
+
+---
+
+## 📝 简历素材清单（30 天后你应该有的）
+
+```
+GitHub:
+  └─ knowledge-agent (公开)
+      ├─ README.md (含架构图、demo gif)
+      ├─ DESIGN.md
+      └─ 完整代码
+
+Blog (掘金/知乎/个人博客):
+  ├─ 我理解的 ReAct 范式 (Week 1)
+  ├─ HelloAgents vs LangGraph 对比 (Week 2)
+  ├─ Agent RAG 实战 (Week 3)
+  └─ 从 0 构建知识库 Agent (Week 4)
+
+简历技能栏可写:
+  Agent 开发：LangGraph、ReAct、MCP、Prompt Engineering
+  RAG：ChromaDB、Embedding、Chunking 策略
+  可观测性：LangSmith Tracing、Prompt 优化
+  后端：FastAPI、SQLite、Python
+
+简历项目栏可写:
+  本地知识库 Agent
+  - 基于 LangGraph 构建状态化 Agent，支持 ReAct 循环与多工具调用
+  - 集成 ChromaDB 实现 RAG 检索增强，自定义 chunking 策略提升召回 X%
+  - 自研 MCP server 实现本地文件读写工具
+  - 通过 LangSmith Tracing 定位 prompt 缺陷，优化后 token 消耗降低 X%
+  - 长期记忆模块持久化用户偏好，跨会话生效
+  - FastAPI 包装为 HTTP 服务，Postman 可调
+```
+
+---
+
+## 🎓 项目通过标准
+
+不是"能跑"，而是：
+1. ✅ 一个**没看过你代码**的人，能根据 README 在 10 分钟内跑起来
+2. ✅ 你能**口述**项目从架构到细节，**不超过 5 分钟**讲完一遍
+3. ✅ 面试官问"你这个项目难点是什么"，你能讲出 3 个真实的踩坑
+
+---
+
+## 🔗 资源
+
+- 教程参考：`code/chapter13/helloagents-trip-planner/`（架构借鉴，不抄代码）
+- LangGraph + RAG: https://langchain-ai.github.io/langgraph/tutorials/rag/
+- 本周设计文档模板：[project-design-template.md](./project-design-template.md)
 
 ---
 
