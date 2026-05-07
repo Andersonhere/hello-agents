@@ -79,8 +79,8 @@
 - 💡 核心洞察：**Agent 的"记忆"不是模型自带，是开发者拼接 messages 拼出来的**
 
 **📂 产出文件**：
-- `output/code/week2/mini_simple_agent.py` —— 手写极简版（含 3 题复盘）
-- `week2/notes/day8-10-practice.md` —— 5 题预测对照笔记
+- `code/week2/mini_simple_agent.py` —— 手写极简版（含 3 题复盘）
+- `week2/notes/day9-practice.md` —— 5 题预测对照笔记
 
 ---
 
@@ -88,7 +88,7 @@
 
 **主题**：手写极简版 ReActAgent —— 让 Agent 学会"思考-行动-观察"循环
 
-**目标产出**：`output/code/week2/mini_react_agent.py`（≤80 行）
+**目标产出**：`code/week2/mini_react_agent.py`（≤80 行）
 
 **核心要求**：
 - ⬜ 实现 ReAct prompt 模板（Thought / Action / Observation 三段式）
@@ -267,10 +267,10 @@ Week 4:  ░░░░░░░░ 0 小时
 
 ### Week 2 关键产出（简历素材）
 
-- [x] `output/code/week2/mini_simple_agent.py` ✅ Day 9
-- [ ] `output/code/week2/mini_react_agent.py`
-- [ ] `output/code/week2/langgraph_react_agent.py`
-- [ ] `output/notes/week2-framework-comparison.md`（博客）
+- [x] `code/week2/mini_simple_agent.py` ✅ Day 9
+- [ ] `code/week2/mini_react_agent.py`
+- [ ] `code/week2/langgraph_react_agent.py`
+- [ ] `blogs/week2-framework-comparison.md`（博客）
 
 ---
 
