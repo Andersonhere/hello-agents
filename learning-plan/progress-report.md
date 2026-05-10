@@ -251,12 +251,21 @@ Week 4:  ░░░░░░░░ 0 小时
 - [x] 60 min 5 题预测对比 + 文件末 3 题复盘
 - [x] 安全规范：API key 迁移到 `.env`
 
-### 🎯 立即开始：Day 10 手写极简版 ReActAgent
+### ✅ Day 10 已完成（2026-05-10，约 3.5h）
 
-- [ ] 30 min 复习 Week 1 ReAct 范式（Thought/Action/Observation）
-- [ ] 90 min **不看源码**手写 `mini_react_agent.py`（≤80 行）
-- [ ] 60 min 跑通"北京温度乘以 2"测试 + 调试 max_iterations
-- [ ] 60 min 对照官方 `MyReActAgent`，更新笔记
+- [x] 30 min 复习 Week 1 ReAct 范式
+- [x] 90 min 手写 `mini_react_agent.py`（约 80 行）
+- [x] 60 min 跑通"北京温度×2"测试，3 轮循环成功
+- [x] 30 min SSL 抖动排查 + 加 3 次指数退避重试
+- [x] 60 min `with_raw_response` 看清完整 HTTP 响应 + 写笔记
+- [x] 安全规范：`stop=["Observation:"]` 防 LLM 编造 Observation
+
+### 🎯 立即开始：Day 11 LangGraph 入门
+
+- [ ] 30 min LangGraph 概念扫盲（StateGraph、Node、Edge、State Schema）
+- [ ] 60 min 跟官方 quickstart 跑通 hello-world graph
+- [ ] 60 min 手写一个 2 节点 graph（input → process → output）
+- [ ] 60 min 阅读 LangGraph 源码：State 是怎么传递的？
 
 ### Day 11-14 后续
 
