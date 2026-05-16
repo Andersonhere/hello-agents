@@ -1,8 +1,8 @@
 # Day 11：LangGraph 入门
 
-> **日期**：2026-05-12
-> **进度**：关卡 1（线性 graph）✅ 已完成
-> **下一步**：关卡 2（加 LLM 节点）+ 关卡 3（条件边 + 循环）
+> **日期**：2026-05-12 起 → 2026-05-17 完结
+> **进度**：关卡 1 / 2 / 3 ✅ 全部通过
+> **下一步**：Day 12（条件边进阶 + checkpointer 持久化）
 
 ---
 
@@ -254,16 +254,116 @@ def ask_llm_node(state) -> dict:
 
 ---
 
-## 📝 关卡 1 完成的对比题（关卡 3 后再补全）
+## ✅ 关卡 2 / 3 成果
 
-### Q1. LangGraph State vs 我手写 messages 的痛点？
-**A**：LangGraph 强制定义 schema → 节点解耦 + 可序列化 + 可视化；手写 messages 是局部变量 → 节点强耦合 + 改一处全要改 + 没法持久化。
+### 关卡 2（LLM 节点）
+- 配置 scnet Qwen3-235B-A22B（OpenAI 兼容协议）
+- 单节点 `ask_llm_node` 跑通 QA：`state["question"]` → LLM → `{"answer": ...}`
+- **关键认知**：LLM client 在模块顶层初始化（连接复用），节点函数只做"组装请求 + 解析响应"
 
-### Q2. 节点函数签名 `(state) -> dict` 复用性如何？
-**A**：（关卡 2 后回答）
+### 关卡 3（ReAct 重写）
+- 4 个组件：`ReActState`（带 `Annotated[list, operator.add]` reducer）/ `call_llm_node` / `call_tool_node` / `should_continue`
+- 图结构：`START → llm → [tool↔llm 循环 / END]`
+- **跑通输出**：1 轮迭代解决"北京温度×2"问题，5 条 messages
+- **真实代码量对比**：Day 10 ~80 行手写循环 vs Day 11 ~50 行节点+图（节点 40 + 路由 8 + build 7）
 
-### Q3. conditional_edge vs if-else 调试方便程度？
-**A**：（关卡 3 后回答）
+---
 
-### Q4. LangGraph 重写 ReAct 会少多少代码？
-**A**：（关卡 3 后回答）
+## 🐛 关卡 3 踩坑（⭐⭐⭐ 调试肌肉记忆）
+
+### 坑 5：`self.xxx` 写在模块级函数里
+从 Day 10 类方法的肌肉记忆复制过来，`call_llm_node` 不是方法没有 `self` → `NameError`。
+**长期记忆**：LangGraph 节点是 **模块级纯函数**，client/model 在文件顶层初始化，节点直接引用全局名。
+
+### 坑 6：消息是 dict 不是对象
+```python
+last_message.content      # ❌ AttributeError
+last_message["content"]   # ✅
+```
+节点之间通过 dict 传递消息（OpenAI chat completions 格式），不是对象。
+
+### 坑 7：`_parse_action` 返回 tuple 不是 dict
+```python
+action["tool_name"]   # ❌ TypeError: tuple indices must be integers
+tool_name, params = action   # ✅ 解构
+```
+**教训**：用 unfamiliar 函数前先看签名，不要凭直觉假设返回类型。
+
+### 坑 8：`fn(*tool_args)` 解包字符串
+`tool_args` 是字符串 `"北京"`，`*` 解包 = 拆成单字符 `("北","京")` → `fn("北","京")` 报"2 个位置参数"。
+**长期记忆**：
+- `fn(x)` 单值传参
+- `fn(*list)` 拆位置参数（list/tuple）
+- `fn(**dict)` 拆关键字参数（dict）
+
+### 坑 9：`final_answer` 塞整段 LLM 输出
+原始写法 `final_answer = response.content` 把 `"Thought:...\nAction: Finish[20°C]"` 整段塞进去。
+**正确做法**：用 `re.search(r"Finish\[(.*?)\]", content, re.DOTALL)` 提取方括号内容。
+**教训**：字段语义要严格，"含 20" 测试虽过但答案污染了。
+
+---
+
+## 📝 4 道对比题（关卡 3 后回答，含 Cascade Review）
+
+### Q1. State vs Day 10 messages 局部变量
+
+**我的答案（v1）**：state 黑盒难理解；局部变量直观但复用差。
+
+**Review**：错了一半。**State 恰恰是显式 schema、可观测、可序列化的**，是 LangGraph 能做 checkpointer / time-travel / 可视化的根本。局部变量才是真黑盒（藏在函数里，外部看不见）。
+
+**修订答案**：
+- State：TypedDict 强类型 + reducer 显式合并 + 节点间解耦 → 框架能拿来做持久化和并发安全合并
+- 局部 messages：藏在 `run()` 内，每加一步都要改函数体，无法被外部观察 / 回放 / 暂停
+
+### Q2. 节点函数 `(state) -> dict` 复用性 vs `run()` 方法
+
+**我的答案（v1）**：复用性更好，因为可以被多个节点调用。
+
+**Review**：循环论证。节点本身就是函数，"被节点调用"等于没说。
+
+**修订答案**：
+- 节点是**纯函数 + 固定契约**（入 state、出 partial state dict）→ 同一节点可放进不同 graph 复用；单测只需传 state dict，不用 mock 整个 Agent 类
+- Day 10 的 `run()` 是 `MiniReActAgent` 实例方法，跟类强绑定 → 想单独测"调 LLM 这一步"必须 mock 整个对象
+
+### Q3. conditional_edge vs if-else 调试方便程度
+
+**我的答案（v1）**：conditional_edge 更方便，能清晰看到每条条件的执行路径。
+
+**Review**：方向对但虚，没说出"为什么能看到"。
+
+**修订答案**：conditional_edge 把路由逻辑从节点抽出来变成图上的边，框架可以：
+- 自动 trace 每次跳转（配合 LangSmith 直接出时序图）
+- 静态分析画出 graph 结构图
+- 暂停/单步执行
+而 if-else 散落在 `run()` 里只能 print log，没法被工具链识别。
+
+### Q4. 重写代码量 + 复杂度
+
+**我的答案（v1）**：会少很多代码，复杂度会降低。
+
+**Review**：空洞无数据。手上明明有实测：
+
+**修订答案**：
+- 代码量：Day 10 mini_react_agent.py ~80 行 → Day 11 LangGraph 版 ~50 行，**减少 ~38%**
+- 表面复杂度：降低（无 while + 无手写重试，框架接管）
+- **真实认知复杂度：升高** —— 要学 5 个新概念（State / Node / Edge / Conditional Edge / Reducer）+ 1 套调用约定（return dict 触发 merge）
+- 价值不在"少写"，在"**可扩展性**"——加 checkpointer 几行代码、加并发节点零额外代价，Day 10 手写版要重写一整轮
+
+---
+
+## 🎓 Day 11 总复盘
+
+**3 个核心收获**：
+
+1. **声明式 vs 命令式的思维切换**——从"我写流程"变成"我画图，框架跑流程"。一开始很别扭（关卡 3 写 4 个函数感觉支离破碎），但理解之后会发现：每个节点只关心自己输入输出，**节点间的调度交给图**，这是工程上能横向扩展的基础。
+
+2. **纯函数节点是底线**——关卡 1 坑 3 的"直接改 state" 教训刻在心里：节点必须 `return dict` 不能改入参，否则 checkpointer/time-travel/并发都会炸。这是 LangGraph 5 个核心约束里最严格的一条，写代码时永远先问"我有没有 mutate state"。
+
+3. **Reducer 是被低估的设计**——`Annotated[list, operator.add]` 看起来只是个累加器，实际上是 LangGraph 能做"并发节点安全合并"的关键。等关卡 3 之后看 LangGraph 的 `add_messages` 内置 reducer 实现，能体会到为什么 langchain 团队会把这套抽象当作核心。
+
+**给未来自己的提醒**：
+- 看 unfamiliar 函数前先看签名，**不要凭直觉假设返回 dict 还是 tuple**（坑 7）
+- `*` / `**` 解包前先确认参数是字符串/列表/字典（坑 8）
+- 字段语义要严格，**测试通过 ≠ 实现正确**（坑 9 的 final_answer 污染）
+
+**面试预备**：Q1-Q4 修订答案是面试官最爱问的方向，下次能流畅说出"State 是 LangGraph 实现持久化/可视化的根基"、"节点纯函数让复用 + 单测变简单"、"conditional_edge 是工具链一等公民"、"代码量减少但认知复杂度升高，换来可扩展性"四句，本周博客就有素材了。

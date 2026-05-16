@@ -166,9 +166,9 @@ def test_level2():
 - Q2. 怎么判断该去 call_tool 还是 END？这个判断函数放在哪里？
 - Q3. 怎么防止无限循环？（Day 10 用 max_iterations，LangGraph 怎么做？）
 
-A1. 
-A2. 
-A3. 
+A1. 需要，防止答案覆盖，支持自动追加历史消息
+A2. 通过模型返回格式来判断，如果返回的是工具调用格式，则去 call_tool，否则去 END，放在should_continue
+A3. 通过配置 max_iterations 来防止无限循环
 
 【约束】
 - 复用 Day 10 的 TOOLS、SYSTEM_PROMPT、_parse_action（可以从 mini_react_agent.py import）
@@ -178,6 +178,7 @@ A3.
 
 from typing import Annotated
 import operator
+import re
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -208,7 +209,19 @@ def call_llm_node(state: ReActState) -> dict:
     - 第一次进来时 messages 为空，需要插入 system + 初始 user question
     - 但用户的 question 应该在 invoke 时就传进 messages（看 test_level3）
     """
-    pass
+    response = LLM.chat.completions.create(
+        model=MODEL,
+        messages=state["messages"],
+        stop=["Observation:"]
+    )
+    content = response.choices[0].message.content
+    # 始终把这条 assistant 消息追加进 messages（保留完整 trace）
+    ret = {"messages": [{"role": "assistant", "content": content}]}
+    # 命中 Finish[...] 时，额外提取方括号里的纯答案到 final_answer
+    m = re.search(r"Finish\[(.*?)\]", content, re.DOTALL)
+    if m:
+        ret["final_answer"] = m.group(1).strip()
+    return ret
 
 
 # TODO: 节点 2 —— 执行工具
@@ -220,7 +233,15 @@ def call_tool_node(state: ReActState) -> dict:
     - 解析失败或拿到 finish 时不该走到这里（路由层已经拦掉）
     - 工具执行也复用 Day 10 的 TOOLS 字典
     """
-    pass
+    last_message = state["messages"][-1]
+    action = _parse_action(last_message["content"])
+    if action is None:
+        raise RuntimeError(f"call_tool_node 被错误调度，最后一条消息无 Action: {last_message['content']!r}")
+    tool_name = action[0]
+    tool_args = action[1]
+    fn, _desc = TOOLS[tool_name]
+    observation = fn(tool_args)
+    return {"messages": [{"role": "user", "content": f"Observation: {observation}"}], "iteration": state["iteration"] + 1}
 
 
 # TODO: 路由函数（不是节点，是条件边的判断器）
@@ -232,7 +253,15 @@ def should_continue(state: ReActState) -> str:
     
     返回的字符串必须是 add_conditional_edges 里 mapping 的 key
     """
-    pass
+    last_message = state["messages"][-1]
+    if state["iteration"] >= 5:
+        return "end"
+    if "Finish[" in last_message["content"]:
+        return "end"
+    if "Action:" in last_message["content"]:
+        return "tool"
+
+    return "end"
 
 
 def build_react_graph():
@@ -244,7 +273,13 @@ def build_react_graph():
     5. add_edge("tool", "llm")   ← 这条边形成循环
     6. compile()
     """
-    pass
+    graph = StateGraph(ReActState)
+    graph.add_node("llm", call_llm_node)
+    graph.add_node("tool", call_tool_node)
+    graph.add_edge(START, "llm")
+    graph.add_conditional_edges("llm", should_continue, {"tool": "tool", "end": END})
+    graph.add_edge("tool", "llm")
+    return graph.compile()
 
 
 def test_level3():
@@ -278,21 +313,22 @@ def test_level1():
 
 
 if __name__ == "__main__":
-    test_level1()
-    test_level2()
+    # test_level1()
+    # test_level2()
+    test_level3()
 
 
 # ==============================================================
 # 完成后回答这 4 个对比题（写到笔记里）
 # ==============================================================
 # Q1. LangGraph 的 State vs Day 10 的 messages 局部变量，各自痛点？
-# A1. 
+# A1. state比较黑盒，较难理解。局部变量比较直观，但复用性差。
 
 # Q2. 节点函数签名 (state) -> dict，相比 Day 10 的 run() 方法，复用性如何？
-# A2. 
+# A2. 节点函数签名 (state) -> dict复用性更好，因为可以被多个节点调用。
 
 # Q3. conditional_edge 相比 if-else，调试时哪个更方便？为什么？
-# A3. 
+# A3. conditional_edge更方便，因为可以清晰地看到每个条件的执行路径。
 
 # Q4. 用 LangGraph 重写你 Day 10 的 mini_react_agent，会少多少代码？复杂度怎么变？
-# A4. 
+# A4. 会少很多代码，复杂度会降低。
