@@ -6,11 +6,14 @@
 #   bash learning-plan/setup.sh                # 全量部署（首次）
 #   bash learning-plan/setup.sh --recreate     # 删掉旧 venv 重建
 #   bash learning-plan/setup.sh --deps-only    # 只装/升级依赖
+#   bash learning-plan/setup.sh --install-shell-hook
+#                                              # 仅向 ~/.bashrc 注入 cd 进项目自动激活 venv 的钩子
 #
 # 产出：
 #   learning-plan/env/venv/              # 虚拟环境（gitignored）
 #   learning-plan/env/requirements.txt   # 依赖清单（gitignored）
 #   learning-plan/.env                   # 实际 env（gitignored）—— 拷贝自 .env.example
+#   ~/.bashrc 末尾追加 hello-agents 自动激活钩子（仅 --install-shell-hook）
 # ============================================================================
 set -euo pipefail
 
@@ -24,15 +27,69 @@ ENV_EXAMPLE="$SCRIPT_DIR/.env.example"
 
 RECREATE=0
 DEPS_ONLY=0
+INSTALL_HOOK=0
 for arg in "$@"; do
   case "$arg" in
-    --recreate)  RECREATE=1 ;;
-    --deps-only) DEPS_ONLY=1 ;;
+    --recreate)           RECREATE=1 ;;
+    --deps-only)          DEPS_ONLY=1 ;;
+    --install-shell-hook) INSTALL_HOOK=1 ;;
     -h|--help)
-      sed -n '2,12p' "$0"; exit 0 ;;
+      sed -n '2,14p' "$0"; exit 0 ;;
     *) echo "[warn] 未知参数: $arg" ;;
   esac
 done
+
+# ----------------------------------------------------------------------------
+# 子功能：向 ~/.bashrc 注入 "cd 进项目自动激活 venv" 钩子
+# 原理：bash 每次显示提示符前执行 PROMPT_COMMAND，钩子函数检查 PWD 前缀，
+#       匹配项目目录则 source venv/activate，离开则 deactivate。幂等安全。
+# ----------------------------------------------------------------------------
+install_shell_hook() {
+  local PROJECT_ROOT
+  PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+  local TARGET_VENV="$VENV_DIR"
+  local MARKER="# >>> hello-agents auto venv >>>"
+  local END_MARKER="# <<< hello-agents auto venv <<<"
+
+  if grep -qF "$MARKER" "$HOME/.bashrc" 2>/dev/null; then
+    echo "  ✅ 钩子已存在于 ~/.bashrc，跳过"
+    return 0
+  fi
+
+  cat >> "$HOME/.bashrc" <<EOF
+
+$MARKER
+# hello-agents 项目：进入目录自动激活 venv，离开自动 deactivate
+# 由 learning-plan/setup.sh --install-shell-hook 写入，可手动删除整段
+_HELLO_AGENTS_ROOT="$PROJECT_ROOT"
+_HELLO_AGENTS_VENV="$TARGET_VENV"
+_hello_agents_auto_venv() {
+    if [[ "\$PWD" == "\$_HELLO_AGENTS_ROOT"* ]]; then
+        if [[ "\$VIRTUAL_ENV" != "\$_HELLO_AGENTS_VENV" ]]; then
+            [[ -n "\$VIRTUAL_ENV" ]] && deactivate 2>/dev/null
+            # shellcheck disable=SC1091
+            source "\$_HELLO_AGENTS_VENV/bin/activate" 2>/dev/null
+        fi
+    else
+        if [[ "\$VIRTUAL_ENV" == "\$_HELLO_AGENTS_VENV" ]]; then
+            deactivate 2>/dev/null
+        fi
+    fi
+}
+PROMPT_COMMAND="_hello_agents_auto_venv;\${PROMPT_COMMAND:-}"
+$END_MARKER
+EOF
+  echo "  ✅ 已写入 ~/.bashrc"
+  echo "  ℹ️  立即生效：source ~/.bashrc  （或开新终端）"
+}
+
+if [ "$INSTALL_HOOK" = 1 ]; then
+  echo "[hook] 安装 shell 自动激活钩子 ..."
+  install_shell_hook
+  echo "[hook] 完成"
+  # 仅装钩子模式：不跑后续部署
+  exit 0
+fi
 
 echo "[1/5] 检查系统 Python ..."
 if ! command -v python3 >/dev/null 2>&1; then

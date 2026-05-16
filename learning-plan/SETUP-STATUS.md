@@ -68,12 +68,36 @@ learning-plan/env/venv/bin/python learning-plan/code/week2/langgraph_hello.py
 ## 换机器/重装命令
 
 ```bash
-bash learning-plan/setup.sh            # 全量
-bash learning-plan/setup.sh --recreate # 删 venv 重建
-bash learning-plan/setup.sh --deps-only # 只装依赖（不动 .env）
+# 1. 系统级依赖（仅 Ubuntu 首次需要 sudo）
+sudo apt install -y python3.10-venv python3-pip
+
+# 2. 部署虚拟环境 + 安装依赖（清华镜像，约 1-2 分钟）
+bash learning-plan/setup.sh
+
+# 3. 编辑 .env 填真实 LLM_API_KEY
+$EDITOR learning-plan/.env
+
+# 4. （可选，推荐）安装 cd 进项目自动激活 venv 的 shell 钩子
+bash learning-plan/setup.sh --install-shell-hook
+source ~/.bashrc    # 当前终端立刻生效
 ```
 
-如果 PyPI 慢或想换镜像：
+### setup.sh 其它开关
+
 ```bash
-PIP_INDEX=https://pypi.org/simple bash learning-plan/setup.sh
+bash learning-plan/setup.sh --recreate            # 删 venv 重建
+bash learning-plan/setup.sh --deps-only           # 只装依赖（不动 .env）
+bash learning-plan/setup.sh --install-shell-hook  # 仅装 shell 钩子，不部署
+PIP_INDEX=https://pypi.org/simple bash learning-plan/setup.sh  # 换镜像
 ```
+
+---
+
+## Shell 自动激活钩子
+
+`--install-shell-hook` 会在 `~/.bashrc` 末尾写入一段（用 `# >>> hello-agents auto venv >>>` / `# <<<` 包裹的）函数 + `PROMPT_COMMAND` 注入：
+
+- **效果**：`cd` 进 `hello-agents` 任何子目录时自动 `source venv/activate`（提示符出现 `(venv)`），离开自动 `deactivate`
+- **原理**：bash 每次显示提示符前会执行 `PROMPT_COMMAND`，钩子函数检查 `$PWD` 前缀并对比 `$VIRTUAL_ENV`，幂等切换
+- **回滚**：手动删除 `~/.bashrc` 里 `# >>> hello-agents auto venv >>>` 到 `# <<< hello-agents auto venv <<<` 整段即可
+- **二次执行安全**：函数检查 marker 是否已存在，存在则跳过，不会重复注入
