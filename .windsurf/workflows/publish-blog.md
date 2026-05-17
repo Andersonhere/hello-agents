@@ -153,6 +153,7 @@ git push
 | categories 写成单数变量 | 必须是 `[a, b]` 数组形式 |
 | 正文有顶层 `# 标题` | 会和 front matter 的 title 重复显示，从 `##` 开始 |
 | 改完忘了 push | `cd /home/gaoqi/wkspace/andersonhere.github.io && git status` 检查 |
+| 内链写成 `/posts/标题/` 导致 404 | 本博客 permalink 是 `/:title/`，正确写法 `/标题/` |
 
 ---
 
