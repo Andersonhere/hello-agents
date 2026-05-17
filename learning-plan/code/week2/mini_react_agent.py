@@ -159,7 +159,7 @@ class MiniReActAgent:
             - 否则执行工具，把 Observation 拼成 user role 加进 messages
         Step 3: 超过迭代上限，返回 "未能在 N 轮内解决"
         """
-        messages = [
+        self.messages = [
             {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": question}
         ]
@@ -172,7 +172,7 @@ class MiniReActAgent:
                     # with_raw_response 拿到底层 HTTP 响应，可读 .text / .headers / .status_code
                     raw = self.client.chat.completions.with_raw_response.create(
                         model=self.model,
-                        messages=messages,
+                        messages=self.messages,
                         stop=["Observation:"],
                     )
                     print(f"\n========== 第 {i+1} 轮 RAW Response ==========")
@@ -189,7 +189,7 @@ class MiniReActAgent:
                     print(f"⚠️ LLM 调用失败 ({e.__class__.__name__})，{wait}s 后重试...")
                     time.sleep(wait)
             assistant_message = response.choices[0].message.content
-            messages.append({"role": "assistant", "content": assistant_message})
+            self.messages.append({"role": "assistant", "content": assistant_message})
             
             action = self._parse_action(assistant_message)
             if action is None:
@@ -199,7 +199,7 @@ class MiniReActAgent:
                 return action[1]
                 
             observation = self._execute_tool(action[0], action[1])
-            messages.append({"role": "user", "content": f"Observation: {observation}"})
+            self.messages.append({"role": "user", "content": f"Observation: {observation}"})
             
         return f"未能在 {self.max_iterations} 轮内解决"
 
