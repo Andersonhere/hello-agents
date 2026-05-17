@@ -167,3 +167,7 @@ test_*.py
 !test_tools.py
 .workbuddy/
 memory/
+
+# Day 12 checkpoint DB
+*.day12_checkpoints.db
+**/.day12_checkpoints.db

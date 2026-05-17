@@ -40,6 +40,7 @@ httpx>=0.25.0
 # Week 2+ LangGraph
 # ============================================================================
 langgraph>=0.2.0
+langgraph-checkpoint-sqlite>=2.0.0
 langchain-core>=0.3.0
 
 # hello-agents 隐式依赖（[protocols] extra 没拉进来）
